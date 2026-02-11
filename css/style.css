@@ -1,0 +1,270 @@
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f4f8fc;
+      color: #000;
+      margin-top: -20px;
+    }
+
+    .top-banner {
+      background-color: #cceeff;
+      padding: 10px;
+      font-weight: bold;
+      width: 99vw;
+      /* Full screen width */
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      box-sizing: border-box;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    h2 {
+      color: #0088cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+
+    .logo {
+      width: 100px;
+      max-width: 30vw;
+      border-radius: 50%;
+    }
+
+    .instagram-placeholder {
+      width: 200px;
+      max-width: 60%;
+      height: 100px;
+      border: 2px solid #dbdbdb;
+      border-radius: 10px;
+      background-color: #eee;
+      animation: glowingBorder 1s infinite;
+    }
+
+    @keyframes glowingBorder {
+      0% {
+        border-color: #dbdbdb;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      50% {
+        border-color: #3897f0;
+        box-shadow: 0 6px 16px rgba(56, 151, 240, 0.2);
+      }
+
+      100% {
+        border-color: #dbdbdb;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .header {
+        flex-wrap: nowrap;
+        gap: 10px;
+      }
+
+      .logo {
+        max-width: 40vw;
+      }
+    }
+
+    h1 {
+      color: #000;
+      margin-top: 30px;
+    }
+
+    .highlight {
+      color: #00aaff;
+      font-weight: bold;
+    }
+
+    .green-text {
+      color: green;
+      font-weight: bold;
+    }
+
+    .telegram-button button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      color: #ffffff;
+      font-size: 1rem;
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .telegram-button {
+      background: linear-gradient(135deg, #0088cc, #06489e);
+      color: white;
+      font-size: 17px;
+      padding: 0.7rem 1.2rem;
+      border: none;
+      border-radius: 50px;
+      margin-block: 1rem;
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
+      animation: blink 1s infinite;
+      transition: transform 0.3s linear;
+    }
+
+    .whatsapp-button {
+      background-color: #25D366;
+      color: white;
+      font-size: 17px;
+      padding: 15px 27px;
+      border: none;
+      border-radius: 50px;
+      margin: 10px auto;
+      margin-top: 18px;
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
+      animation: blink 1s infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-button button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      color: #ffffff;
+      font-size: 1rem;
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.08)
+      }
+    }
+
+    .timer {
+      color: red;
+      font-size: 18px;
+      margin-top: -3px;
+    }
+
+    .emoji {
+      font-size: 22px;
+    }
+     /* Accordion Styling */
+    .accordion {
+      background: #fff;
+      border: 1px solid #ddd;
+      margin: 10px auto;
+      padding: 12px;
+      width: 90%;
+      max-width: 800px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #333;
+      text-align: left;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .accordion:hover {
+      background: #e9f7ff;
+      color: #0088cc;
+    }
+
+    /* Arrow Indicator */
+    .accordion::after {
+      content: '\25BC'; /* ▼ */
+      font-size: 14px;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s;
+    }
+
+    .accordion.active::after {
+      content: '\25B2'; /* ▲ */
+    }
+
+    .panel {
+      padding: 10px 15px;
+      display: none;
+      background: #fafafa;
+      border: 1px solid #ddd;
+      border-top: none;
+      width: 90%;
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .panel ul {
+      padding-left: 20px;
+    }
+
+    /* Telegram Button */
+    .telegram-button {
+      display: inline-block;
+      background: #0088cc;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .telegram-button:hover {
+      background: #006699;
+    }
+
+    /* Project Table */
+    .projects {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .projects table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: sans-serif;
+    }
+
+    .projects th,
+    .projects td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .projects thead {
+      background: #f5f5f5;
+    }
