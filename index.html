@@ -45,7 +45,7 @@
 
   <!-- Join Button -->
   <a target="_blank" href="https://t.me/NEHA_BOOK_PUBLICATION2" class="telegram-button"
-    onclick="trackSubscribe();">
+    onclick="trackSubscribe(event)">
     Apply on Telegram
   </a><br>
 
@@ -187,16 +187,27 @@
   </script>
 
   <script>
-    function trackSubscribe() {
-      if (localStorage.getItem('subscribed') === 'true') {
-        console.log("Already subscribed event fired, not sending again.");
+        
+   function trackSubscribe(event) {
+    event.preventDefault();
+
+    const telegramUrl = config.telegramLink;
+
+    if (localStorage.getItem('telegram_subscribed') === 'true') {
+        window.open(telegramUrl, "_blank");
         return;
-      }
-      const eventId = 'subscribe_' + Date.now();
-      fbq('trackCustom', 'Subscribe', {}, { eventID: eventId });
-      localStorage.setItem('subscribed', 'true');
     }
-  </script>
+
+    if (typeof fbq === "function") {
+        fbq('track', 'Subscribe');
+        localStorage.setItem('telegram_subscribed', 'true');
+    }
+
+    setTimeout(function() {
+        window.open(telegramUrl, "_blank");
+    }, 400);
+}
+</script>
 
 </body>
 
