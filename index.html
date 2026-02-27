@@ -44,10 +44,12 @@
   <h4>India's No. 1 Trusted Company: PaperScript Outsourcing</h4>
 
   <!-- Join Button -->
-  <a target="_blank" href="https://t.me/NEHA_BOOK_PUBLICATION2" class="telegram-button"
-    onclick="trackSubscribe(event)">
-    Apply on Telegram
-  </a><br>
+ <a target="_blank"
+   href="https://t.me/NEHA_BOOK_PUBLICATION2"
+   class="telegram-button"
+   id="telegramBtn">
+   Apply on Telegram
+</a><br>
 
   <!-- Project Section -->
   <div class="projects">
@@ -186,32 +188,36 @@
     }
   </script>
 
-  <script>
-    
-  // ✅ Config define kar diya (error fix)
-  const config = {
-    telegramLink: "https://t.me/NEHA_BOOK_PUBLICATION2"
-  };
-    
-   function trackSubscribe(event) {
-    event.preventDefault();
+<script>
+(function() {
 
-    const telegramUrl = config.telegramLink;
+  const btn = document.getElementById("telegramBtn");
 
-    if (localStorage.getItem('telegram_subscribed') === 'true') {
-        window.open(telegramUrl, "_blank");
-        return;
+  btn.addEventListener("click", function(e) {
+
+    // Allow real human click only
+    if (!e.isTrusted) {
+      e.preventDefault();
+      return;
     }
 
-    if (typeof fbq === "function") {
-        fbq('track', 'Subscribe');
-        localStorage.setItem('telegram_subscribed', 'true');
+    // Already tracked on this device?
+    if (localStorage.getItem("telegramTracked") === "true") {
+      return;
     }
 
-    setTimeout(function() {
-        window.open(telegramUrl, "_blank");
-    }, 400);
-}
+    // Mark as tracked permanently
+    localStorage.setItem("telegramTracked", "true");
+
+    const eventId = "tg_" + Date.now();
+
+    if (typeof fbq !== "undefined") {
+      fbq('track', 'Subscribe', {}, { eventID: eventId });
+    }
+
+  });
+
+})();
 </script>
 
 </body>
