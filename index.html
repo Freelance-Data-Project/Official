@@ -27,13 +27,14 @@
       src="https://www.facebook.com/tr?id=906737922209706&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
 
-
+  
 </head>
+
 <body>
 
   <div class="top-banner">
     Don't have <strong>Telegram</strong> yet?
-    <a href="https://telegram.me/NEHA_BOOK_PUBLICATION2">Try it now</a>
+    <a href="https://t.me/NEHA_BOOK_PUBLICATION2">Try it now</a>
   </div>
 
   <div class="header">
@@ -44,23 +45,22 @@
   <h4>India's No. 1 Trusted Company: PaperScript Outsourcing</h4>
 
   <!-- Join Button -->
- <a target="_blank"
-   href="https://telegram.me/NEHA_BOOK_PUBLICATION2"
-   class="telegram-button"
-   id="telegramBtn">
-   Apply on Telegram
-</a><br>
+  <a target="_blank" href="https://t.me/NEHA_BOOK_PUBLICATION2" class="telegram-button"
+    onclick="trackSubscribe();">
+    Apply on Telegram
+  </a><br>
 
   <!-- Project Section -->
   <div class="projects">
-    <h3 style="text-align:center;color:#05d474;">📑 Projects & Rewards</h3>
+    <h3 style="text-align:center;color:#05d474;">📑 Projects & Plan</h3>
+    <p>(Full <strong>&</strong> Part Time Work)</p>
     <table>
       <thead>
         <tr>
           <th>Project</th>
           <th>Pages</th>
-          <th>Duration</th>
-          <th>Estimated Reward</th>
+          <th>🕓Duration</th>
+          <th>💰Estimated Reward</th>
         </tr>
       </thead>
       <tbody>
@@ -68,25 +68,25 @@
           <td>Project 1</td>
           <td>50 pages (front + back = 100)</td>
           <td>7 days</td>
-          <td>₹13,500</td>
+          <td>Up to ₹25,000</td>
         </tr>
         <tr>
           <td>Project 2</td>
           <td>90 pages (front + back = 180)</td>
           <td>10 days</td>
-          <td>₹19,000</td>
+          <td>Up to 30,000</td>
         </tr>
         <tr>
           <td>Project 3</td>
           <td>120 pages (front + back = 240)</td>
           <td>15 days</td>
-          <td>₹22,000</td>
+          <td>Up to ₹35,000</td>
         </tr>
         <tr>
           <td>Project 4</td>
           <td>190 pages (front + back = 380)</td>
-          <td>26 days</td>
-          <td>₹28,000</td>
+          <td>30 days</td>
+          <td>Up to ₹45,000</td>
         </tr>
       </tbody>
     </table>
@@ -152,15 +152,14 @@
   <div class="timer" id="countdown">00 Min 59 Sec ⏳ Hurry, Limited Seats!</div>
   <p>If you have <strong>Telegram</strong> you can view and apply,
     <span class="highlight">
-      <a href="https://telegram.me/NEHA_BOOK_PUBLICATION2" style="text-decoration: none; color: #00aaff;">
+      <a href="https://t.me/NEHA_BOOK_PUBLICATION2" style="text-decoration: none; color: #00aaff;">
         Freelance Data Solution
       </a>
     </span>
     right away <span class="emoji">🚀</span>
   </p>
-
+   <p class="info-link-text">📢Advertise by <a href="https://t.me/IDF24" class="avitor-link avitor-icon-link" target="_blank" rel="noopener noreferrer"><strong>EVOLUTION DIGITAL MARKETING™</strong></a></p>
   <script src="js/ionicons.js"></script>
-
 
   <script>
         // Countdown Timer
@@ -186,7 +185,26 @@
         panel.style.display = panel.style.display === "block" ? "none" : "block";
       });
     }
-  </script>
+      </script>
+<script>
+  function trackSubscribe() {
+    if (localStorage.getItem('subscribed') === 'true') {
+      console.log("Already subscribed event fired, not sending again.");
+      return;
+    }
+
+    const eventId = 'subscribe_' + Date.now();
+
+    fbq('track', 'Subscribe', {
+      value: 0.00,
+      currency: 'USD'
+    }, {
+      eventID: eventId
+    });
+
+    localStorage.setItem('subscribed', 'true');
+  }
+</script>
 
 
 
