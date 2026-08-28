@@ -188,8 +188,36 @@
     }
   </script>
 
+<script>
+(function() {
+ const eventId = "tg_" + Date.now();
+  const btn = document.getElementById("telegramBtn");
 
+  btn.addEventListener("click",function(e) {
+
+  // Allow real humanclick only
+if (!e.isTrusted) {
+  e.preventDefault();
+  return;
+}
+
+ // Already tracked on this device?
+if (localStorage.getItem("telegramTracked") ==="true") {
+  return;
+}
+
+// Mark as tracked permanently
+localStorage.setItem("telegramTracked",
+
+ const eventId = "tg_" + Date.now();
+
+    if (typeof fbq !== "undefined") {
+    fbq('track', 'Subscribe', {}, { eventIeventId });
+    }
+
+    });
+
+ }));
+  - </script>
 
 </body>
-
-</html>
