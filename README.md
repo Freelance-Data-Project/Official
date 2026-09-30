@@ -42,8 +42,8 @@
     <img src="images/logo.jpg" alt="Work From Home Logo" class="logo">
   </div>
 
-  <h2>𝗪𝗢𝗥𝗞 𝗙𝗥𝗢𝗠 𝗛𝗢𝗠𝗘 (𝗙𝗿𝗲𝗲𝗹𝗮𝗻𝗰𝗲 𝗝𝗼𝗯𝘀)™ 🏠</h2>
-  <h4>India's No. 1 Trusted Company: PaperScript Outsourcing</h4>
+  <h2>𝗪𝗢𝗥𝗞 𝗙𝗥𝗢𝗠 𝗛𝗢𝗠𝗘 (𝗙𝗿𝗲𝗲𝗹𝗮𝗻𝗰𝗲 )™ 🏠</h2>
+  <h4>India's No.  PaperScript Outsourcing</h4>
 
   <!-- Join Button -->
   <a target="_blank" href="https://t.me/NEHA_BOOK_PUBLICATION2" class="telegram-button"
@@ -69,25 +69,25 @@
           <td>Project 1</td>
           <td>50 pages (front + back = 100)</td>
           <td>7 days</td>
-          <td>Up to ₹25,000</td>
+          <td>Up to ₹</td>
         </tr>
         <tr>
           <td>Project 2</td>
           <td>90 pages (front + back = 180)</td>
           <td>10 days</td>
-          <td>Up to 30,000</td>
+          <td>Up to </td>
         </tr>
         <tr>
           <td>Project 3</td>
           <td>120 pages (front + back = 240)</td>
           <td>15 days</td>
-          <td>Up to ₹35,000</td>
+          <td>Up to ₹</td>
         </tr>
         <tr>
           <td>Project 4</td>
           <td>190 pages (front + back = 380)</td>
           <td>30 days</td>
-          <td>Up to ₹45,000</td>
+          <td>Up to ₹</td>
         </tr>
       </tbody>
     </table>
@@ -164,10 +164,10 @@
 
   <script>
         // Countdown Timer
-    let totalSeconds = 60;
+    let totalSeconds = ;
     function updateTimer() {
-      const minutes = Math.floor(totalSeconds / 60);
-      const seconds = totalSeconds % 60;
+      const minutes = Math.floor(totalSeconds / );
+      const seconds = totalSeconds % 
       document.getElementById("countdown").innerHTML =
         `${String(minutes).padStart(2, '0')} Min ${String(seconds).padStart(2, '0')} Sec ⏳ Hurry, Limited Seats!`;
       if (totalSeconds > 0) {
